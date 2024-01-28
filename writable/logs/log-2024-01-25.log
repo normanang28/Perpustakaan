@@ -1,0 +1,117 @@
+CRITICAL - 2024-01-25 00:25:33 --> Invalid file: header.php
+#0 C:\xampp\htdocs\perpustakaan\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+#1 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('header', Array, true)
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(11): view('header')
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->data_petugas()
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-01-25 04:21:17 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2024-01-25 04:21:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\perpustakaan\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\perpustakaan\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#2 C:\xampp\htdocs\perpustakaan\app\Models\M_model.php(400): CodeIgniter\Database\BaseBuilder->insert(Array)
+#3 C:\xampp\htdocs\perpustakaan\app\Controllers\Sign_Up.php(36): App\Models\M_model->simpan('user', Array)
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\Sign_Up->create_account()
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign_Up))
+#6 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-25 04:37:35 --> Invalid file: header.php
+#0 C:\xampp\htdocs\perpustakaan\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+#1 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('header', Array, true)
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(29): view('header', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->data_pengguna()
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-25 05:16:09 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\perpustakaan\app\Views\data_master\data_petugas.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\perpustakaan\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\perpustakaan\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('data_master/dat...', Array, true)
+#4 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(13): view('data_master/dat...')
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->data_petugas()
+#6 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#7 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-25 05:16:18 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\perpustakaan\app\Views\data_master\data_petugas.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\perpustakaan\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\perpustakaan\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('data_master/dat...', Array, true)
+#4 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(13): view('data_master/dat...')
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->data_petugas()
+#6 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#7 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-25 05:16:32 --> Cannot redeclare App\Controllers\DM::data_pengguna()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-25 05:16:54 --> Cannot redeclare App\Controllers\DM::data_pengguna()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-25 05:16:55 --> Cannot redeclare App\Controllers\DM::data_pengguna()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-25 05:43:36 --> Too few arguments to function App\Controllers\DM::tidak_aktif_DP(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->tidak_aktif_DP()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-25 06:05:47 --> Unknown column 'petugas.id_user_petugasid_user_petugas' in 'where clause'
+CRITICAL - 2024-01-25 06:05:47 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(143): App\Models\M_model->edit_user('petugas', 'user', 'petugas.id_user...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->edit_DPP('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-25 06:06:07 --> Unknown column 'petugas.id_user_petugasid_user_petugas' in 'on clause'
+CRITICAL - 2024-01-25 06:06:07 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\DM.php(143): App\Models\M_model->edit_user('petugas', 'user', 'petugas.id_user...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->edit_DPP('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-25 06:09:46 --> syntax error, unexpected '{', expecting '('
+#0 C:\xampp\htdocs\perpustakaan\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('DM/aksi_edit_pe...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('DM/aksi_edit_pe...')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-25 06:13:19 --> Too few arguments to function App\Controllers\DM::hapus_DP(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->hapus_DP()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-25 06:13:27 --> Too few arguments to function App\Controllers\DM::hapus_DP(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\DM->hapus_DP()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DM))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-25 06:38:39 --> Duplicate entry '2147483647' for key 'NIP'
+ERROR - 2024-01-25 06:41:12 --> Duplicate entry 'petugas 01' for key 'USERNAME'
+ERROR - 2024-01-25 06:41:12 --> Duplicate entry '2147483647' for key 'NIP'
+ERROR - 2024-01-25 06:45:14 --> Duplicate entry '2147483647' for key 'NIP'

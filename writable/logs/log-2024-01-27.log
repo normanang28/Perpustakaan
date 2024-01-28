@@ -1,0 +1,55 @@
+ERROR - 2024-01-27 00:28:25 --> Table 'perpustakaan.peminjaman' doesn't exist
+CRITICAL - 2024-01-27 00:28:25 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(147): App\Models\M_model->super('peminjaman', 'buku', 'user', 'peminjaman.id_b...', 'peminjaman.make...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-27 00:28:46 --> Table 'perpustakaan.peminjaman' doesn't exist
+CRITICAL - 2024-01-27 00:28:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(147): App\Models\M_model->super('peminjaman', 'buku', 'user', 'peminjaman.id_b...', 'peminjaman.make...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-27 00:29:36 --> Table 'perpustakaan.peminjaman' doesn't exist
+CRITICAL - 2024-01-27 00:29:36 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(147): App\Models\M_model->super('peminjaman', 'buku', 'user', 'peminjaman.id_b...', 'peminjaman.make...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-27 00:30:26 --> Table 'perpustakaan.peminjaman' doesn't exist
+CRITICAL - 2024-01-27 00:30:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(147): App\Models\M_model->super('peminjaman', 'buku', 'user', 'peminjaman.id_b...', 'peminjaman.make...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-27 00:31:08 --> Table 'perpustakaan.peminjaman' doesn't exist
+CRITICAL - 2024-01-27 00:31:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(147): App\Models\M_model->super('peminjaman', 'buku', 'user', 'peminjaman_buku...', 'peminjaman_buku...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-27 21:39:52 --> syntax error, unexpected '-', expecting ';'
+#0 C:\xampp\htdocs\perpustakaan\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('buku/peminjaman', Array, true)
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(157): view('buku/peminjaman')
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->peminjaman()
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
