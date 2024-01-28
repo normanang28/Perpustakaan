@@ -189,21 +189,28 @@ class E_Perpus extends BaseController
 
     public function peminjaman()
     {
-        $model=new M_model();
-        $on='peminjaman_buku.id_buku_buku=buku.id_buku';
-        $on2='peminjaman_buku.maker_peminjaman_buku=user.id_user';
-        $data['data']=$model->super('peminjaman_buku', 'buku', 'user', $on, $on2);
+        $model = new M_model();
+        $id = session()->get('id');
+        $level = session()->get('level');
 
-        $id=session()->get('id');
-        $where=array('id_user'=>$id);
+        if ($level == 1 || $level == 2) {
+            $on = 'peminjaman_buku.id_buku_buku=buku.id_buku';
+            $on2 = 'peminjaman_buku.maker_peminjaman_buku=user.id_user';
+            $data['data'] = $model->super('peminjaman_buku', 'buku', 'user', $on, $on2);
+        } elseif ($level == 3) {
+            $on = 'peminjaman_buku.id_buku_buku=buku.id_buku';
+            $on2 = 'peminjaman_buku.maker_peminjaman_buku=user.id_user';
+            $where = array('id_user' => $id);
+            $data['data'] = $model->superWithWhere('peminjaman_buku', 'buku', 'user', $on, $on2, $where);
+        }
 
-        $where=array('id_user' => session()->get('id'));
-        $data['foto']=$model->getRow('user',$where);
+        $where = array('id_user' => $id);
+        $data['foto'] = $model->getRow('user', $where);
 
-        echo view('layout/header',$data);
+        echo view('layout/header', $data);
         echo view('layout/menu');
         echo view('buku/peminjaman');
-        echo view('layout/footer'); 
+        echo view('layout/footer');
     }
 
     public function tambah_peminjaman()

@@ -800,4 +800,9 @@ class M_model extends model
 			AND '".$akhir."'"
 		)->getResult();
 	}
+
+	public function superWithWhere($table1, $table2, $table3, $on, $on2, $where)
+	{
+	    return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->where($where)->get()->getResult();
+	}
 }
