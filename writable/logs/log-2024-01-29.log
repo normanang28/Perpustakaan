@@ -1,0 +1,9 @@
+ERROR - 2024-01-29 06:46:43 --> Unknown column 'pengembalian_buku.id_user_pengguna' in 'on clause'
+CRITICAL - 2024-01-29 06:46:43 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\Laporan.php(68): App\Models\M_model->filter_pengembalian('pengembalian_bu...', '2024-01-28', '2024-01-29')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\Laporan->print_pengembalian()
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

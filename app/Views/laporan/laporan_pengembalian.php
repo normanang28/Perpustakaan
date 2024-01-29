@@ -67,7 +67,7 @@
             <tr>
               <td><?php echo $dataa->judul_buku?></td>
               <td><?php echo $dataa->stok?></td>
-              <td><?php echo $dataa->nama_peminjaman?></td>
+              <td><?php echo $dataa->nama_pengguna?></td>
               <td><?php echo $dataa->tanggal_pengembalian?></td>
             </tr>
           <?php }?>

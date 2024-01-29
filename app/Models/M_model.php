@@ -806,6 +806,7 @@ class M_model extends model
 		return $this->db->query(
 			"SELECT *
 			FROM ".$table."
+			join pengguna ON ".$table.".id_pengguna = pengguna.id_pengguna
 			join buku ON ".$table.".id_buku_buku = buku.id_buku
 			WHERE ".$table.".tanggal_pengembalian
 			BETWEEN '".$awal."'
