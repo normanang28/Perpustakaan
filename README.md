@@ -1,5 +1,6 @@
 # Perpustakaan Digital
 
+<i class="fa-brands fa-php"></i>
 <br>
 
 ## Apa itu Perpustakaan Digital?
@@ -16,3 +17,4 @@ As with the rest of the framework, it is a work in progress, and will see change
 You might also be interested in the [API documentation](https://codeigniter4.github.io/api/) for the framework components.
 
 
+<script src="https://kit.fontawesome.com/c0c79d4e21.js" crossorigin="anonymous"></script>
