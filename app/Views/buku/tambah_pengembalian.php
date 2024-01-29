@@ -23,8 +23,14 @@
                         </div>
                         <div class="mb-3 col-md-12">
                             <label class="form-label">Nama Pengembalian<span style="color: red;">*</span></label>
-                            <input type="text" id="nama_peminjaman" name="nama_peminjaman" 
-                            class="form-control text-capitalize" placeholder="Nama Pengembalian">
+                            <select name="id_pengguna" class="form-control text-capitalize" id="id_pengguna" required>
+                                <option>Pilih Nama Pengembalian</option>
+                                <?php 
+                                foreach ($np as $nama) { 
+                                ?>
+                                    <option class="text-capitalize" value="<?php echo $nama->id_pengguna ?>"><?php echo $nama->nama_pengguna ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
                   <a href="<?= base_url('/E_Perpus/pengembalian')?>" type="button" class="btn btn-primary">Cancel</a></button>

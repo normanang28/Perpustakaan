@@ -14,6 +14,18 @@ class M_model extends model
 	    return $this->db->table($table)->where($where)->get()->getResult();
 	}
 
+	public function getWhereKey($table, $where,$key)
+	{
+		$query = $this->db->table($table)->getWhere($where)->getResult();
+
+		$result = [];
+		foreach ($query as $row) {
+			$result[$row->$key] = $row;
+		}
+
+		return $result;
+	}
+
 	public function pay_invoice($table1, $table2, $table3, $on, $on2, $where)
 	{
 		return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->getWhere($where)->getRow();
@@ -804,5 +816,20 @@ class M_model extends model
 	public function superWithWhere($table1, $table2, $table3, $on, $on2, $where)
 	{
 	    return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->where($where)->get()->getResult();
+	}
+
+	// Di dalam M_model
+	public function getFavoritStatus($id_user, $id_buku)
+	{
+	    return $this->db->table('favorit')
+	        ->where('id_user', $id_user)
+	        ->where('id_buku', $id_buku)
+	        ->get()
+	        ->getRow();
+	}
+
+	public function detail_ulasan($table1, $table2, $table3, $on, $on2, $where)
+	{
+		return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->getWhere($where)->getResult();
 	}
 }

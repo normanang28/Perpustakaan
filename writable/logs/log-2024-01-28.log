@@ -5,3 +5,179 @@ CRITICAL - 2024-01-28 01:02:40 --> Class 'Dompdf\Dompdf' not found
 #3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2024-01-28 03:48:35 --> Class 'M_model' not found
+#0 C:\xampp\htdocs\perpustakaan\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\perpustakaan\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('buku/buku', Array, true)
+#3 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(22): view('buku/buku')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->buku()
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#6 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-28 03:48:52 --> Class 'M_model' not found
+#0 C:\xampp\htdocs\perpustakaan\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\perpustakaan\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\perpustakaan\system\Common.php(1089): CodeIgniter\View\View->render('buku/buku', Array, true)
+#3 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(22): view('buku/buku')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->buku()
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#6 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-28 04:05:06 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 04:05:17 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 04:05:29 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 04:05:30 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 04:05:30 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 04:05:30 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 20:54:30 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\perpustakaan\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\perpustakaan\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): CodeIgniter\Model->__call('detail_penyetor...', Array)
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#4 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#5 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-01-28 21:05:33 --> Column 'id_buku' in where clause is ambiguous
+CRITICAL - 2024-01-28 21:05:33 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): App\Models\M_model->detail_ulasan('ulasan', 'buku', 'user', 'ulasan.id_buku=...', 'ulasan.maker_ul...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-28 21:07:13 --> Column 'id_buku' in where clause is ambiguous
+CRITICAL - 2024-01-28 21:07:13 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): App\Models\M_model->detail_ulasan('ulasan', 'buku', 'user', 'ulasan.id_buku=...', 'ulasan.maker_ul...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-28 21:07:22 --> Column 'id_buku' in where clause is ambiguous
+CRITICAL - 2024-01-28 21:07:22 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): App\Models\M_model->detail_ulasan('ulasan', 'buku', 'user', 'ulasan.id_buku=...', 'ulasan.maker_ul...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-28 21:07:44 --> Column 'id_buku' in where clause is ambiguous
+CRITICAL - 2024-01-28 21:07:44 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(358): App\Models\M_model->detail_ulasan('ulasan', 'buku', 'user', 'ulasan.id_buku=...', 'ulasan.maker_ul...', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->detail_ulasan('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 21:13:15 --> Cannot redeclare App\Controllers\E_Perpus::tambah()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2024-01-28 21:18:45 --> Unknown column 'ulasan.id_buku' in 'where clause'
+CRITICAL - 2024-01-28 21:18:45 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan\app\Controllers\E_Perpus.php(376): App\Models\M_model->tampilWhere('buku', Array)
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->tambah_ulasan('2')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 21:24:17 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\perpustakaan\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('E_Perpus/tambah...')
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('E_Perpus/tambah...')
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 21:27:16 --> Too few arguments to function App\Controllers\E_Perpus::tambah_ulasan(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->tambah_ulasan()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:27:23 --> Too few arguments to function App\Controllers\E_Perpus::tambah_ulasan(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->tambah_ulasan()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:27:37 --> Too few arguments to function App\Controllers\E_Perpus::tambah_ulasan(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->tambah_ulasan()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:27:54 --> Too few arguments to function App\Controllers\E_Perpus::tambah_ulasan(), 0 passed in C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(832): App\Controllers\E_Perpus->tambah_ulasan()
+#1 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\E_Perpus))
+#2 C:\xampp\htdocs\perpustakaan\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

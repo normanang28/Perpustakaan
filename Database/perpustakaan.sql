@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2024 at 10:18 AM
+-- Generation Time: Jan 29, 2024 at 07:09 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -41,7 +41,8 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id_buku`, `judul_buku`, `jenis_buku`, `tahun_terbit`, `file_buku`, `jumlah`) VALUES
-(2, 'agama buddha - 12', 'pendidikan', 'Juni 2018 , 242 Halaman', '1706424143_cfeaad59991487904e70.pdf', '8');
+(2, 'agama buddha - 12', 'pendidikan', 'Juni 2018 , 242 Halaman', '1706424143_cfeaad59991487904e70.pdf', '8'),
+(4, 'coba', 'coba', 'coba', '1706498828_aea38682551644148cd8.pdf', '0');
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,26 @@ DELIMITER $$
 CREATE TRIGGER `masuk` AFTER INSERT ON `buku_masuk` FOR EACH ROW UPDATE buku SET jumlah = jumlah + new.stok WHERE id_buku = new.id_buku_buku
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `favorit`
+--
+
+CREATE TABLE `favorit` (
+  `id_favorit` int(4) NOT NULL,
+  `id_buku` int(4) NOT NULL,
+  `maker_favorit` int(4) NOT NULL,
+  `tanggal_favorit` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `favorit`
+--
+
+INSERT INTO `favorit` (`id_favorit`, `id_buku`, `maker_favorit`, `tanggal_favorit`) VALUES
+(8, 2, 1, '2024-01-29');
 
 -- --------------------------------------------------------
 
@@ -120,7 +141,7 @@ CREATE TABLE `pengembalian_buku` (
   `id_pengembalian_buku` int(4) NOT NULL,
   `id_buku_buku` int(4) NOT NULL,
   `stok` varchar(255) NOT NULL,
-  `nama_peminjaman` varchar(255) NOT NULL,
+  `id_pengguna` int(4) NOT NULL,
   `tanggal_pengembalian` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -128,9 +149,9 @@ CREATE TABLE `pengembalian_buku` (
 -- Dumping data for table `pengembalian_buku`
 --
 
-INSERT INTO `pengembalian_buku` (`id_pengembalian_buku`, `id_buku_buku`, `stok`, `nama_peminjaman`, `tanggal_pengembalian`) VALUES
-(4, 1, '1', 'admin', '2024-01-28'),
-(5, 2, '1', 'admin', '2024-01-28');
+INSERT INTO `pengembalian_buku` (`id_pengembalian_buku`, `id_buku_buku`, `stok`, `id_pengguna`, `tanggal_pengembalian`) VALUES
+(4, 1, '1', 1, '2024-01-28'),
+(5, 2, '1', 1, '2024-01-28');
 
 --
 -- Triggers `pengembalian_buku`
@@ -164,7 +185,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `id_user_pengguna`, `nama_pengguna`, `no_telp`, `status`, `tanggal_pengguna`) VALUES
-(1, 1, 'norman ang', '081371035253', 'Aktif', '2024-01-25 17:37:13');
+(1, 1, 'norman ang', '081371035253', 'Aktif', '2024-01-25 17:37:13'),
+(3, 9, '1', '1', 'Aktif', '2024-01-29 12:55:47');
 
 -- --------------------------------------------------------
 
@@ -195,6 +217,30 @@ INSERT INTO `petugas` (`id_petugas`, `id_user_petugas`, `nama_petugas`, `nip`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ulasan`
+--
+
+CREATE TABLE `ulasan` (
+  `id_ulasan` int(4) NOT NULL,
+  `id_buku` int(4) NOT NULL,
+  `ulasan` varchar(255) NOT NULL,
+  `maker_ulasan` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ulasan`
+--
+
+INSERT INTO `ulasan` (`id_ulasan`, `id_buku`, `ulasan`, `maker_ulasan`) VALUES
+(1, 2, 'bukunya bagus', 1),
+(2, 2, 'bukunya bagu', 2),
+(3, 2, 'jelek', 1),
+(4, 4, 'coba', 1),
+(5, 2, 'coba', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -213,7 +259,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `foto`) VALUES
 (1, 'norman', '9ac915832a9a1c970c1564708917c3aa', 3, ''),
 (2, 'admin', '3dcf34a6023633a0d92521ec9c8d5ae4', 1, ''),
-(8, 'petugas 01', '3dcf34a6023633a0d92521ec9c8d5ae4', 2, '');
+(8, 'petugas 01', '3dcf34a6023633a0d92521ec9c8d5ae4', 2, ''),
+(9, '1', 'c4ca4238a0b923820dcc509a6f75849b', 3, '');
 
 --
 -- Indexes for dumped tables
@@ -231,6 +278,12 @@ ALTER TABLE `buku`
 --
 ALTER TABLE `buku_masuk`
   ADD PRIMARY KEY (`id_buku_masuk`);
+
+--
+-- Indexes for table `favorit`
+--
+ALTER TABLE `favorit`
+  ADD PRIMARY KEY (`id_favorit`);
 
 --
 -- Indexes for table `peminjaman_buku`
@@ -259,6 +312,12 @@ ALTER TABLE `petugas`
   ADD UNIQUE KEY `NIP` (`nip`);
 
 --
+-- Indexes for table `ulasan`
+--
+ALTER TABLE `ulasan`
+  ADD PRIMARY KEY (`id_ulasan`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -273,13 +332,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id_buku` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_buku` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `buku_masuk`
 --
 ALTER TABLE `buku_masuk`
   MODIFY `id_buku_masuk` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `favorit`
+--
+ALTER TABLE `favorit`
+  MODIFY `id_favorit` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `peminjaman_buku`
@@ -297,7 +362,7 @@ ALTER TABLE `pengembalian_buku`
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengguna` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `petugas`
@@ -306,10 +371,16 @@ ALTER TABLE `petugas`
   MODIFY `id_petugas` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `ulasan`
+--
+ALTER TABLE `ulasan`
+  MODIFY `id_ulasan` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -17,6 +17,10 @@ class E_Perpus extends BaseController
         $where=array('id_user' => session()->get('id'));
         $data['foto']=$model->getRow('user',$where);
 
+        $where=array("maker_favorit"=>session()->get('id'));
+        $data['favorit']=$model->getWhereKey('favorit',$where,'id_buku');
+
+
         echo view('layout/header',$data);
         echo view('layout/menu');
         echo view('buku/buku');
@@ -122,6 +126,15 @@ class E_Perpus extends BaseController
         $model=new M_model();
         $where=array('id_buku'=>$id);
         $model->hapus('buku',$where);
+
+        return redirect()->to('/E_Perpus/buku');
+    }
+
+    public function unfavorit($id)
+    {
+        $model=new M_model();
+        $where=array('id_favorit'=>$id);
+        $model->hapus('favorit',$where);
 
         return redirect()->to('/E_Perpus/buku');
     }
@@ -268,7 +281,8 @@ class E_Perpus extends BaseController
     {
         $model=new M_model();
         $on='pengembalian_buku.id_buku_buku=buku.id_buku';
-        $data['data']=$model->fusion('pengembalian_buku', 'buku', $on);
+        $on2='pengembalian_buku.id_pengguna=pengguna.id_pengguna';
+        $data['data']=$model->super('pengembalian_buku', 'buku', 'pengguna', $on, $on2);
 
         $id=session()->get('id');
         $where=array('id_user'=>$id);
@@ -286,7 +300,8 @@ class E_Perpus extends BaseController
     {
         $model=new M_model();
         $on='pengembalian_buku.id_buku_buku=buku.id_buku';
-        $data['data']=$model->fusion('pengembalian_buku', 'buku', $on);
+        $on2='pengembalian_buku.id_pengguna=pengguna.id_pengguna';
+        $data['data']=$model->super('pengembalian_buku', 'buku', 'pengguna', $on, $on2);
 
         $id=session()->get('id');
         $where=array('id_user'=>$id);
@@ -295,6 +310,7 @@ class E_Perpus extends BaseController
         $data['foto']=$model->getRow('user',$where);
 
         $data['a']=$model->tampil('buku'); 
+        $data['np']=$model->tampil('pengguna'); 
 
         echo view('layout/header', $data);
         echo view('layout/menu');
@@ -306,13 +322,13 @@ class E_Perpus extends BaseController
     {
         $model=new M_model();
         $buku=$this->request->getPost('id_buku');
+        $pengguna=$this->request->getPost('id_pengguna');
         $stok=$this->request->getPost('stok');
-        $nama_peminjaman=$this->request->getPost('nama_peminjaman');
         $data=array(
 
             'id_buku_buku'=> $buku,
+            'id_pengguna'=> $pengguna,
             'stok'=>$stok,
-            'nama_peminjaman'=>$nama_peminjaman,
         );
 
         $model->simpan('pengembalian_buku',$data);
@@ -326,5 +342,82 @@ class E_Perpus extends BaseController
         $model->hapus('pengembalian_buku',$where);
 
         return redirect()->to('/E_Perpus/pengembalian');
+    }
+
+    public function favorit($id)
+    {
+        if(session()->get('id')>0) {
+
+        $model=new M_model();
+        $maker_favorit=session()->get('id');
+        $data=array(
+
+            'id_buku'=>$id,
+            'maker_favorit'=>$maker_favorit
+        );
+
+        $model->simpan('favorit',$data);
+        return redirect()->to('E_Perpus/buku');
+
+        }else{
+            return redirect()->to('E_Perpus/buku');
+        }
+    } 
+
+    public function detail_ulasan($id)
+    {
+        $model=new M_model();
+        $where2=array('ulasan.id_buku'=>$id); 
+        $on='ulasan.id_buku=buku.id_buku';
+        $on2='ulasan.maker_ulasan=user.id_user';
+        $data['data']=$model->detail_ulasan('ulasan', 'buku', 'user',$on, $on2, $where2);
+
+        $where2=array('buku.id_buku'=>$id); 
+        $data['buku']=$model->tampilWhere('buku', $where2);
+
+        $id=session()->get('id');
+        $where=array('id_user'=>$id);
+
+        $where=array('id_user' => session()->get('id'));
+        $data['foto']=$model->getRow('user',$where);
+
+        echo view('layout/header',$data);
+        echo view('layout/menu');
+        echo view('buku/ulasan');
+        echo view('layout/footer');
+    }
+
+    public function tambah_ulasan($id)
+    {
+        $model=new M_model();
+        $where2=array('buku.id_buku'=>$id); 
+        $data['data']=$model->tampilWhere('buku', $where2);
+
+        $id=session()->get('id');
+        $where=array('id_user'=>$id);
+        $data['foto']=$model->getRow('user',$where);
+
+        echo view('layout/header',$data);
+        echo view('layout/menu');
+        echo view('buku/tambah_ulasan');
+        echo view('layout/footer');
+    }
+
+    public function aksi_tambah_ulasan()
+    {
+        $model = new M_model();
+        $ulasan = $this->request->getPost('ulasan');
+        $idbuku = $this->request->getPost('idbuku');
+
+        $maker_ulasan=session()->get('id');
+        $data = array(
+            'ulasan' => $ulasan,
+            'id_buku' => $idbuku,
+            'maker_ulasan'=>$maker_ulasan
+        );
+
+        $model->simpan('ulasan', $data);
+        return redirect()->to('/E_Perpus/buku');
+        
     }
 }

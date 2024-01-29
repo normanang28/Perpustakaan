@@ -24,7 +24,7 @@
 						<tr>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->judul_buku?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->stok?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama_peminjaman?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama_pengguna?></td>
 							<td style="text-align: center;">
 					        <a href="<?= base_url('/E_Perpus/hapus_pengembalian/' .$dataa->id_pengembalian_buku)?>"><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
 							</td>	

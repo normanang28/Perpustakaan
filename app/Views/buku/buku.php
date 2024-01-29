@@ -57,8 +57,13 @@
 <?php }else{} ?>
 <?php  if(session()->get('level')== 3) { ?>
                             <td class="d-flex justify-content-between">
-                            <a href="<?= base_url('/E_Perpus/favorit/' .$dataa->id_buku)?>"><button class="btn btn-success"><i class="fa-regular fa-star"></i></button></a>
-                            <a href="<?= base_url('/E_Perpus/ulasan/' .$dataa->id_buku)?>"><button class="btn btn-info"><i class="fa-regular fa-comment"></i></button></a>
+                        <?php if(empty($favorit[$dataa->id_buku])) { ?>
+                            <a href="<?= base_url('E_Perpus/favorit/'.$dataa->id_buku)?>"><button class="btn btn-success"><i class="fa-regular fa-bookmark"></i></button></a>
+                        <?php }else{ ?>
+                            <a href="<?= base_url('E_Perpus/unfavorit/'.$favorit[$dataa->id_buku]->id_favorit)?>"><button class="btn btn-success"><i class="fa-solid fa-bookmark"></i></button></a>
+                        <?php } ?>
+
+                            <a href="<?= base_url('E_Perpus/detail_ulasan/' .$dataa->id_buku)?>"><button class="btn btn-info"><i class="fa-regular fa-comment"></i></button></a>
                             </td>
 <?php }else{} ?>
                         </tr>
