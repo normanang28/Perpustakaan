@@ -18,6 +18,7 @@ Aplikasi tersebut dibuat untuk memberikan kepada pengguna yang ingin meminjam bu
 4. Peminjaman Buku Dengan Jarak Jauh,
 5. Laporan Peminjaman dan Pengembalian.
 
+<br>
 
 Aplikasi tersebut memiliki 3 level yang dimana memiliki fiturnya sendiri, seperti berikut:
 1. Admin / Adminstrator
