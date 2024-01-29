@@ -8,7 +8,8 @@ Perpustakaan digital adalah suatu sistem yang menyediakan akses elektronik terha
 
 ### Dokumentasi
 
-Pada aplikasi "Perpustakaan Digital" ini dirancang & dikembangkan menggunakan bahasa PHP dengan perpaduan JavaSript dan CSS serta menggunakan framework CodeIgniter 4 yang dimana framework web full-stack PHP yang ringan, cepat, fleksibel dan aman. Informasi lebih lanjut dapat ditemukan di [situs resmi](http://codeigniter.com).
+Pada aplikasi "Perpustakaan Digital" ini dirancang & dikembangkan menggunakan bahasa PHP dengan perpaduan JavaSript dan CSS serta menggunakan framework CodeIgniter 4 yang dimana framework web full-stack PHP yang ringan, cepat, fleksibel dan aman. 
+Informasi lebih lanjut dapat ditemukan di [situs resmi](http://codeigniter.com).
 
 Aplikasi tersebut dibuat untuk memberikan kepada pengguna yang ingin meminjam buku dan membaca buku secara online atau digital, pada aplikasi ini terdapat beberapa fitur yaitu sebagai berikut:
 1. Login / Register,
